@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="styleX.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to Course Finder</h1>
+        <p>Course finder is optimized for viewing courses and calculating the courses you qualify for according to your Grade 11 AP Score or Final Matric AP Score.</p>
+        <h1>Login</h1>
+        <!-- Login form -->
+        <script>
+            function togglePassword() {
+                const passwordInput = document.getElementById('password');
+                const toggleCheckbox = document.getElementById('showPassword');
+                if (toggleCheckbox.checked) {
+                    passwordInput.type = 'text';
+                } else {
+                    passwordInput.type = 'password';
+                }
+            }
+            function validateLogin() {
+                // Add your login validation logic here
+                console.log('Validating login...');
+            }
+        </script>
+        <form onsubmit="validateLogin(); return false;">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <label>
+                <input type="checkbox" id="showPassword" onclick="togglePassword()">
+                Show Password
+            </label>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <p>Don't have an account? <a href="register.html">Register here</a>.</p>
+        <p>Copyright &copy; 2024 Created by Ofentse Mathosi 
+            | Powered by OM Tech Solutions</p>
+    </div>
+    <script>
+        const loginForm = document.getElementById('loginForm');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Retrieve user data from localStorage
+            const user = JSON.parse(localStorage.getItem(email));
+
+            if (user && user.password === password) {
+                alert('Login successful');
+                // Redirect to a dashboard or home page after successful login
+                window.location.href = '';
+            } else {
+                alert('Invalid email or password');
+            }
+        });
+    </script>
+</body>
+</html>

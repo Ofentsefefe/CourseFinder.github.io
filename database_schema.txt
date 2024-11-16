@@ -1,0 +1,31 @@
+CREATE DATABASE course_finder_users;
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
+    email VARCHAR(255),
+    password VARCHAR(255)
+);
+
+INSERT INTO users (username, email, password) VALUES
+(10, 'thabang', 'johnraythabang@gmail.com', '$2y$10$7AnPr3mYKntBeeupOCs5we54sb5vNXfBqcu30FomrCVb4EzogTXzK'),
+(11, 'john', 'john@gmail.com', '$2y$10$/iitZZWX3Z.U369x8CSKfOAb3U.JHCUy.xRevFaD0DdrLc1EGUG1q'),
+(12, 'aphile', 'aphile@gmail.com', '$2y$10$m3ZTSaqyVaaq7LHvjzyYaOCFalTXSumxW7xErSMRMCDIWXkfj0d7S'),
+(13, 'jeremia', 'jeremia@gmail.com', '$2y$10$eGp2iuvBzGltjAJsmn3BJOskpL2djt4Wowiov7NWb9/fNwE0WSn4O');
+CREATE TABLE reviews (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255),
+    food VARCHAR(255),
+    stars INT,
+    review_text TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+INSERT INTO reviews (username, food, stars, review_text, created_at) VALUES
+('thabang', 'burger', 5, 'this is amazing', '2024-05-27 19:46:47'),
+('john', 'burger', 5, 'excellent keep up the good work', '2024-05-27 19:48:32'),
+('aphile', 'burger', 5, 'good work', '2024-05-27 19:49:01'),
+('jeremia', 'burger', 4, 'awesome', '2024-05-27 19:55:56'),
+('tintwalo', 'burger', 4, 'amazing', '2024-05-27 23:13:39'),
+('tintwalo', 'burger', 4, 'amazing', '2024-05-27 23:13:46'),
+('tintwalo', 'burger', 4, 'continue with good work', '2024-05-27 23:16:47'),
+('tintwalo', 'burger', 4, 'continue with good work', '2024-05-27 23:16:56');
