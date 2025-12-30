@@ -10,7 +10,6 @@ def register():
     return render_template('register.html')
 
 app = Flask(__name__)
-
 # Create SQLite database
 def init_db():
     conn = sqlite3.connect('users.db')
@@ -60,5 +59,6 @@ def login():
 if __name__ == '__main__':
     init_db()  # Initialize the database
     app.run(debug=True, port=8000)
+
 
 
