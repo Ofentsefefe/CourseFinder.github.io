@@ -20,12 +20,12 @@ Message the admin if you encounter a problem
 and you are allowed to ask any questions, it respond instantly and direct you to the available admin.
 ## Secure Authentication 🛡️
 Register and log in with your details
-## Tech_Stack
+# Tech_Stack
 | Frontend | Backend | Database |
 |----------|----------|----------|
 |Java Script, HTML, CSS | Firebase| MySQL |
 
-## future_improvement
+# future_improvement
 ⭐ Applying portal that helps students to register to different universities and bursary opportunities
 
 📍 Location filtering
