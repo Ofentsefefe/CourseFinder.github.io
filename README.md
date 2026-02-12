@@ -26,17 +26,13 @@ Register and log in with your details
 |Java Script, HTML, CSS | Firebase| MySQL |
 
 ## future_improvement
-⭐ Ratings & review system for products
+⭐ Applying portal that helps students to register to different universities and bursary opportunities
 
-📍 Location filtering South Africa for now
+📍 Location filtering
 
 📱 Mobile app version (React Native / Flutter)
 
 🔔 Real-time notifications
-
-💳 Secure online payments for premium sessions
-
-Real-time Tracking orders
 
 
 
