@@ -2,9 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import sqlite3
 from flask import Flask, render_template
-
 app = Flask(__name__)
-
 @app.route('/register')
 def register():
     return render_template('register.html')
@@ -59,6 +57,7 @@ def login():
 if __name__ == '__main__':
     init_db()  # Initialize the database
     app.run(debug=True, port=8000)
+
 
 
 
