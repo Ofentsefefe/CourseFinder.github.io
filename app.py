@@ -6,7 +6,6 @@ app = Flask(__name__)
 @app.route('/register')
 def register():
     return render_template('register.html')
-
 app = Flask(__name__)
 # Create SQLite database
 def init_db():
@@ -22,7 +21,7 @@ def init_db():
     ''')
     conn.commit()
     conn.close()
-
+    
 # Route for the registration form
 @app.route('/register.html', methods=['GET', 'POST'])
 def register():
@@ -53,10 +52,10 @@ def register():
 def login():
     return "Login Page"
 
-
 if __name__ == '__main__':
     init_db()  # Initialize the database
     app.run(debug=True, port=8000)
+
 
 
 
